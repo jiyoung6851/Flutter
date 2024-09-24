@@ -1,0 +1,29 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+
+# 기본 린트 규칙을 포함하도록 설정
+include: package:flutter_lints/flutter.yaml
+
+# linter(코드 분석기) 가 적용할 규칙
+linter: 
+  rules:
+    # 생성자 사용이 필수가 아님
+    prefer_const_constructors: false
+    # final 필드가 필수가 아님
+    prefer_final_fields: false
+    # 생성자의 키가 필수가 아님
+    use_key_in_widget_constructors: false
+    # const 리터럴이 필수가 아님
+    prefer_const_literals_to_create_immutables: false
+    # 변경 불가능한 객체를 생성할 때 const생성자가 필수가 아님
+    prefer_const_constructors_in_immutables: false
+    # print 사용할 때 제한 없음
+    avoid_print: false
+    # packages, and plugins designed to encourage good coding practices.
