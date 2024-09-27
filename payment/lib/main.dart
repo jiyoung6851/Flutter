@@ -46,11 +46,8 @@ class _SecondRouteState extends State<SecondRoute> {
   String _data = "";
 
   String get applicationId {
-    return Bootpay().applicationId(
-        '5b8f6a4d396fa665fdc2b5e7',
-        '5b8f6a4d396fa665fdc2b5e8',
-        '5b8f6a4d396fa665fdc2b5e9'
-    );
+    return Bootpay().applicationId('5b8f6a4d396fa665fdc2b5e7',
+        '5b8f6a4d396fa665fdc2b5e8', '5b8f6a4d396fa665fdc2b5e9');
   }
 
   @override
@@ -66,10 +63,9 @@ class _SecondRouteState extends State<SecondRoute> {
     return Scaffold(
       body: Center(
           child: TextButton(
-            onPressed: () => goBootpayTest(context),
-            child: Text('부트페이 결제 테스트'),
-          )
-      ),
+        onPressed: () => goBootpayTest(context),
+        child: Text('부트페이 결제 테스트'),
+      )),
     );
   }
 
@@ -118,13 +114,13 @@ class _SecondRouteState extends State<SecondRoute> {
   // 결제용 데이터 초기화 함수
   bootpayRequestDataInit() {
     Item item1 = Item();
-    item1.id="ITEM_CODE_MOUSE";
+    item1.id = "ITEM_CODE_MOUSE";
     item1.name = "미키 마우스";
     item1.qty = 1;
     item1.price = 500;
 
     Item item2 = Item();
-    item2.id="ITEM_CODE_KEYBOARD";
+    item2.id = "ITEM_CODE_KEYBOARD";
     item2.name = "키보드";
     item2.qty = 1;
     item2.price = 500;
